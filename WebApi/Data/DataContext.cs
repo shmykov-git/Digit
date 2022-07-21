@@ -11,5 +11,6 @@ namespace WebApi.Data
 
         public DbSet<Country> Countries { get; set; }
         public DbSet<Region> Regions { get; set; }
+        public DbSet<Location> Locations { get; set; }
     }
 }

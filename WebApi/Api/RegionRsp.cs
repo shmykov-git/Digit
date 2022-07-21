@@ -1,9 +1,8 @@
-namespace WebApi.Model;
+﻿namespace WebApi.Api;
 
-public class Region
+public class RegionRsp
 {
     public int RegionId { get; set; }
     public int CountryId { get; set; }
-    public Country Country { get; set; } = default!;
     public string Name { get; set; } = default!;
 }

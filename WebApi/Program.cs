@@ -12,6 +12,12 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
 });
 
+builder.Services.AddAuthorization(opts => {
+    opts.AddPolicy("Digit", policy => {
+        policy.RequireClaim("userId");
+    });
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
